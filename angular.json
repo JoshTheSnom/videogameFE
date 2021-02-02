@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "videogameFE"
+    }
+  },
+  "defaultProject": "videogameFE",
+  "cli": {
+    "analytics": false
+  }
 }
