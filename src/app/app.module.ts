@@ -8,6 +8,8 @@ import { GameDetailComponent } from './game-detail/game-detail.component';
 import { GamesComponent } from './games/games.component';
 import {HttpClientModule} from "@angular/common/http";
 import {GamesService} from "./games.service";
+import {FormsModule} from "@angular/forms";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {GamesService} from "./games.service";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [GamesService],
   bootstrap: [AppComponent]

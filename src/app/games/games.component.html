@@ -1,6 +1,16 @@
-Ahoj
-<tr *ngFor="let caretaker of Games" class="caretaker">
-  <td class="detail">{{caretaker.name}}</td>
-  <td class="detail">{{caretaker.genre}}</td>
-  <td class="detail">{{caretaker.release}}</td>
-</tr>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Genre</th>
+      <th>Release</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let game of Games">
+      <td>{{game.name}}</td>
+      <td>{{game.genre}}</td>
+      <td>{{game.release}}</td>
+    </tr>
+  </tbody>
+</table>

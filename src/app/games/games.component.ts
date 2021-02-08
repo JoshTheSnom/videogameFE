@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { GamesService } from "../games.service";
+import {Component, OnInit} from '@angular/core';
+import {GamesService} from "../games.service";
 import {HttpClient} from "@angular/common/http";
 import {Game} from "../game.model";
 
@@ -12,7 +12,7 @@ export class GamesComponent implements OnInit {
 
   public Games: Game[];
 
-  constructor(private gamesService:GamesService, private httpClient: HttpClient) {
+  constructor(private gamesService: GamesService, private httpClient: HttpClient) {
     this.gamesService.getGames()
       .subscribe(
         (data: Game[]) => {
@@ -22,11 +22,10 @@ export class GamesComponent implements OnInit {
           console.log(error);
         }
       );
-    }
+  }
 
   ngOnInit(): void {
   }
-
 
 
 }
