@@ -12,14 +12,8 @@ export interface IGameEntity {
 })
 export class GamesService {
 
-  constructor(private httpClient: HttpClient) {
-    this.httpClient.get("http://localhost:8080/videogame/api/videogames").subscribe((response)=>{
-      console.log(response);
-    })
-  }
+  constructor(private httpClient: HttpClient) { }
   getGames(){
-    this.httpClient.get("http://localhost:8080/videogame/api/videogames").subscribe((response)=>{
-      console.log(response);
-    })
+    return this.httpClient.get("http://localhost:8080/videogame/api/videogames");
   }
 }

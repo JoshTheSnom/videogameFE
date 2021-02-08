@@ -7,6 +7,7 @@ import { GameCreateComponent } from './game-create/game-create.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import { GamesComponent } from './games/games.component';
 import {HttpClientModule} from "@angular/common/http";
+import {GamesService} from "./games.service";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GamesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
