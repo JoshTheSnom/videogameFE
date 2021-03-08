@@ -10,13 +10,17 @@ import {HttpClientModule} from "@angular/common/http";
 import {GamesService} from "./games.service";
 import {FormsModule} from "@angular/forms";
 import {CommonModule} from "@angular/common";
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameCreateComponent,
     GameDetailComponent,
-    GamesComponent
+    GamesComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

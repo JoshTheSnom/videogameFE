@@ -21,8 +21,7 @@ export class GamesService {
   postGame(name: string, genre: string, release: number) {
     const body = new Game(name, genre, release);
     console.log(body);
-    const bodyString = JSON.stringify(body);
-    this.httpClient.post("http://localhost:4200/videogame/api/videogames", bodyString, {observe: 'response'})
+    this.httpClient.post("http://localhost:4200/videogame/api/videogames", body, {observe: 'response'})
       .subscribe(
         (data) => {
           console.log(data);

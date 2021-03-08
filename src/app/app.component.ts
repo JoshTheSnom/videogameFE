@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {UsersService} from "./users.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'videogameFE';
+
+  constructor(private readonly usersService: UsersService) { }
+
+  error = this.usersService.isError;
 }

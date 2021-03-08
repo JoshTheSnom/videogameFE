@@ -1,4 +1,8 @@
 <a routerLink="create">Add Videogame</a><br>
 <a routerLink="games">See All Videogames</a><br>
+<a routerLink="register">Register</a><br>
+<a routerLink="login">Login</a><br>
 
 <router-outlet></router-outlet>
+
+<p *ngIf="error">Chybička se vloudila</p>
