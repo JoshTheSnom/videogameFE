@@ -18,8 +18,18 @@ export class LoginComponent implements OnInit {
   email = 'lorem@ipsum.com';
   password = '';
 
+  error: boolean = false;
+
   submit(){
-    this.usersService.login(this.username, this.email, this.password);
+    this.usersService.login(this.username, this.email, this.password)
+      .subscribe(
+        (data) => {
+          console.log(data);
+        }, (error) => {
+          console.log(error);
+          this.error = true;
+        }
+      );
   }
 
 }

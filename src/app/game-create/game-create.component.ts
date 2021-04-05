@@ -10,27 +10,26 @@ import {Game} from "../game.model";
   styleUrls: ['./game-create.component.scss']
 })
 export class GameCreateComponent implements OnInit {
-  private Games: Game[];
 
-  constructor(private gamesService: GamesService, private httpClient: HttpClient) {
-    this.gamesService.getGames()
-      .subscribe(
-        (data: Game[]) => {
-          this.Games = data;
-          console.log(data);
-        }, (error) => {
-          console.log(error);
-        }
-      );
-  }
+  constructor(private gamesService: GamesService, private httpClient: HttpClient) { }
 
   name = '';
   genre = '';
   release = '';
 
+  error: boolean = false;
+
 
   createGame() {
-    this.gamesService.postGame(this.name, this.genre, parseInt(this.release, 10));
+    this.gamesService.postGame(this.name, this.genre, parseInt(this.release, 10))
+      .subscribe(
+        (data) => {
+          console.log(data);
+        }, (error) => {
+          console.log(error);
+          this.error = true;
+        }
+      );
   }
 
   ngOnInit(): void {

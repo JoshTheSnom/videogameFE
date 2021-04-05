@@ -1,5 +1,5 @@
-<input id="name" name="name" placeholder="Name" [(ngModel)]="name">
-<input id="genre" name="genre" placeholder="Genre" [(ngModel)]="genre">
-<input id="release" name="release" placeholder="Release" [(ngModel)]="release">
+<input id="name" name="name" placeholder="Name" [(ngModel)]="name"><br>
+<input id="genre" name="genre" placeholder="Genre" [(ngModel)]="genre"><br>
+<input id="release" name="release" placeholder="Release" [(ngModel)]="release" type="number"><br>
 <button (click)="createGame()">Create</button>
-
+<p *ngIf="error == true">You don't seem to be logged in. <a routerLink="/login">Login here.</a><br></p>

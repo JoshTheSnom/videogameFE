@@ -1,5 +1,5 @@
 <h2>Register</h2>
-<input type="text" name="username" [(ngModel)]="username" required #name="ngModel">
-<input type="text" name="email" [(ngModel)]="email" required #name="ngModel">
-<input type="password" name="password" [(ngModel)]="password" required #name="ngModel">
+<input type="text" name="username" placeholder="Username" [(ngModel)]="username" required #name="ngModel">
+<input type="text" name="email" placeholder="Email"[(ngModel)]="email" required #name="ngModel">
+<input type="password" name="password" placeholder="Password"[(ngModel)]="password" required #name="ngModel">
 <button (click)="submit()">Submit</button>

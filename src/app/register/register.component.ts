@@ -18,8 +18,18 @@ export class RegisterComponent implements OnInit {
   email = '';
   password = '';
 
+  error: boolean = false;
+
   submit(){
-    this.usersService.register(this.username, this.email, this.password);
+    this.usersService.register(this.username, this.email, this.password)
+      .subscribe(
+        (data) => {
+          console.log(data);
+        }, (error) => {
+          console.log(error);
+          this.error = true;
+        }
+      );
   }
 
 

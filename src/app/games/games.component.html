@@ -2,6 +2,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Genre</th>
       <th>Release</th>
@@ -9,9 +10,12 @@
   </thead>
   <tbody>
     <tr *ngFor="let game of Games">
+      <td>{{game.id}}</td>
       <td>{{game.name}}</td>
       <td>{{game.genre}}</td>
       <td>{{game.release}}</td>
+      <td><button (click)="detailGame(game.id)">Detail</button></td>
+      <td><button (click)="deleteGame(game.id)">Delete</button></td>
     </tr>
   </tbody>
 </table>

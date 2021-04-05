@@ -1,1 +1,13 @@
-<p>game-detail works!</p>
+<div *ngIf="game">
+<p>ID: {{game.id}}</p>
+<p>Name: {{game.name}}</p>
+<p>Genre: {{game.genre}}</p>
+<p>Release: {{game.release}}</p>
+  <h2>Edit Game</h2>
+  <input id="name" name="name" placeholder="Name" [(ngModel)]="name"><br>
+  <input id="genre" name="genre" placeholder="Genre" [(ngModel)]="genre"><br>
+  <input id="release" name="release" placeholder="Release" [(ngModel)]="release" type="number"><br>
+  <button (click)="edit(game.id)">Edit</button>
+
+</div>
+

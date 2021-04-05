@@ -28,34 +28,13 @@ export class UsersService {
   register(username: string, email: string, password: string) {
     const body = new User(username, email, password);
     console.log(body);
-    this.httpClient.post("http://localhost:4200/videogame/api/authentication/register", body, {observe: 'response'})
-      .subscribe(
-        (data) => {
-          console.log(data);
-
-        },
-        (error) => {
-          console.log(error);
-          this.isError = true;
-        }
-      );
+    return this.httpClient.post("http://localhost:4200/videogame/api/authentication/register", body, {observe: 'response'});
   }
 
   login(username: string, email: string, password: string) {
     const body = new User(username, email, password);
     console.log(body);
-    this.httpClient.post("http://localhost:4200/videogame/api/authentication/login", body, {observe: 'response'})
-      .subscribe(
-        (data) => {
-          console.log(data);
-
-        },
-        (error) => {
-          console.log(error);
-          this.isError = true;
-          console.log(this.isError)
-        }
-      );
+    return this.httpClient.post("http://localhost:4200/videogame/api/authentication/login", body, {observe: 'response'});
   }
 
 }
